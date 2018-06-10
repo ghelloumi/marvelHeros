@@ -17,8 +17,8 @@ export const HEADERS = {
     'Accept': '*/*'
 };
 
-export const API_PUBLIC = 'b1954699cdd7ee3b047cba675152a9b2';
-export const API_PRIVATE = '25ff43feb8b0c57affc8da9fb1098c0aa488a223';
+export const API_PUBLIC = '9452d27dccc6e3330e015f48d183a66c';
+export const API_PRIVATE = 'ed58ae3fec4ade96b736cb6f89b774f563c7cf08';
 export const BASE_URL = 'http://gateway.marvel.com:80';
 
 export const ts = Math.round(new Date().getTime() / 1000);
