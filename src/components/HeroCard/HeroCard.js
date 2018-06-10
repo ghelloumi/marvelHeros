@@ -4,14 +4,13 @@ import PropTypes from 'prop-types';
 import './HeroCard.css';
 import {Modal} from "../modal/Modal";
 import {images} from "../../Constants";
-import {getComicsByCharacter} from "../../services/Api";
 
 const HerosDetailsSection = ({c, title, onclick}) =>
     <div className="HerosDetailsSection">
         <div className="HerosDetailsSectionHeader">
             <div className="HerosDetailsSectionHeaderBackBtn"
                  onClick={onclick}>
-                <img src={images.backArrow}/>
+                <img src={images.backArrow} alt='back'/>
             </div>
             <div className="HerosDetailsSectionHeaderTitle">{title}</div>
         </div>

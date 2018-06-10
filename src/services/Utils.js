@@ -4,7 +4,7 @@ export const MD5 = function (s) {
     }
 
     function K(G, k) {
-        var I, d, F, H, x;
+        let I, d, F, H, x;
         F = (G & 2147483648);
         H = (k & 2147483648);
         I = (G & 1073741824);
@@ -61,14 +61,14 @@ export const MD5 = function (s) {
     }
 
     function e(G) {
-        var Z;
-        var F = G.length;
-        var x = F + 8;
-        var k = (x - (x % 64)) / 64;
-        var I = (k + 1) * 16;
-        var aa = Array(I - 1);
-        var d = 0;
-        var H = 0;
+        let Z;
+        let F = G.length;
+        let x = F + 8;
+        let k = (x - (x % 64)) / 64;
+        let I = (k + 1) * 16;
+        let aa = Array(I - 1);
+        let d = 0;
+        let H = 0;
         while (H < F) {
             Z = (H - (H % 4)) / 4;
             d = (H % 4) * 8;
@@ -84,7 +84,7 @@ export const MD5 = function (s) {
     }
 
     function B(x) {
-        var k = "", F = "", G, d;
+        let k = "", F = "", G, d;
         for (d = 0; d <= 3; d++) {
             G = (x >>> (d * 8)) & 255;
             F = "0" + G.toString(16);
@@ -95,9 +95,9 @@ export const MD5 = function (s) {
 
     function J(k) {
         k = k.replace(/rn/g, "n");
-        var d = "";
-        for (var F = 0; F < k.length; F++) {
-            var x = k.charCodeAt(F);
+        let d = "";
+        for (let F = 0; F < k.length; F++) {
+            let x = k.charCodeAt(F);
             if (x < 128) {
                 d += String.fromCharCode(x);
             } else {
@@ -114,12 +114,12 @@ export const MD5 = function (s) {
         return d;
     }
 
-    var C = Array();
-    var P, h, E, v, g, Y, X, W, V;
-    var S = 7, Q = 12, N = 17, M = 22;
-    var A = 5, z = 9, y = 14, w = 20;
-    var o = 4, m = 11, l = 16, j = 23;
-    var U = 6, T = 10, R = 15, O = 21;
+    let C = [];
+    let P, h, E, v, g, Y, X, W, V;
+    let S = 7, Q = 12, N = 17, M = 22;
+    let A = 5, z = 9, y = 14, w = 20;
+    let o = 4, m = 11, l = 16, j = 23;
+    let U = 6, T = 10, R = 15, O = 21;
     s = J(s);
     C = e(s);
     Y = 1732584193;
@@ -200,6 +200,6 @@ export const MD5 = function (s) {
         W = K(W, v);
         V = K(V, g);
     }
-    var i = B(Y) + B(X) + B(W) + B(V);
+    let i = B(Y) + B(X) + B(W) + B(V);
     return i.toLowerCase();
 };
