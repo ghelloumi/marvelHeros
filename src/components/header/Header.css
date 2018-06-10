@@ -1,0 +1,24 @@
+.HeaderContainer {
+    height: 50px;
+    width: 100%;
+    background: #69696999;
+    z-index: 1;
+}
+
+.HeaderContainer .HeaderLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.HeaderContainer .HeaderLogo > img {
+    height: 35px;
+    margin: 10px;
+}
+
+.HeaderContainer .HeaderLogo > p {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: white;
+    text-shadow: 0 0 10px #581514;
+}

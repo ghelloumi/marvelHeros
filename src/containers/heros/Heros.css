@@ -1,0 +1,60 @@
+.HerosList {
+    height: calc(100vh - 50px);
+    width: 100%;
+    z-index: 1;
+    overflow: auto;
+}
+
+.LoadingResults{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.HerosList .HerosListItems {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    flex-wrap: wrap;
+}
+
+.HerosList .HerosListSearch{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background: #80808059;
+    margin: 20px 80px;
+    padding: 10px 0;
+    border-radius: 6px;
+}
+.HerosList .HerosListSearch>button{
+    height: 34px;
+    border: 0;
+    border-radius: 4px;
+    width: 100px;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #3e3e3e;
+    cursor: pointer;
+    background: #d5d5d5;
+    transition: all 350ms;
+    outline: none;
+}
+.HerosList .HerosListSearch>button:hover{
+    background: #f4f4f4;
+    box-shadow: 0 0 5px #c5c5c5;
+    transition: all 350ms;
+}
+.HerosList .HerosListSearch>input{
+    height: 32px;
+    width: 450px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #373737;
+    padding-left: 12px;
+}
